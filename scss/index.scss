@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 250px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+  
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .cocktail {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  
+    h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #555;
+    }
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      width: 400px;
+      max-width: 90%;
+      text-align: center;
+  
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+  
+      h2 {
+        margin-top: 10px;
+        color: #333;
+      }
+  
+      p, ul {
+        text-align: left;
+        color: #555;
+      }
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
+  }
+  
